@@ -12,6 +12,7 @@ document.addEventListener("click", (e) => {
         if (music.paused) {
             music.play();
         }
+        
         envelopeWrapper.classList.toggle("open");
     } else if (e.target.matches(".envelope *")) {
         if (!letter.classList.contains("open-letter")) {
