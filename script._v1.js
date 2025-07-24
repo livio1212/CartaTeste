@@ -1,5 +1,6 @@
 const envelopeWrapper = document.querySelector(".envelope-wrapper");
 const letter = document.querySelector(".letter");
+const music = document.getElementById("love-song");
 
 document.addEventListener("click", (e) => {
     if (
@@ -10,6 +11,11 @@ document.addEventListener("click", (e) => {
     ) {
         envelopeWrapper.classList.toggle("open");
         envelopeWrapper.classList.add("disable-envelope");
+
+        if (music.paused) {
+            music.play();
+            volume = 0.5; 
+        }
 
         if (!letter.classList.contains("open-letter")) {
             setTimeout(() => {
